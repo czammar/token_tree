@@ -9,6 +9,8 @@ This repository contains the implementation and experimental setup for the Subst
 
 The project provides a pipeline to sample autoregressive text generation paths from a local LLM (via **Ollama**) and map probabilistic token branching into a directed hierarchical graph structure (**Token Tree**). Data can be loaded into **Neo4j** for Cypher graph analysis and rendered visually using **NetworkX** / **Matplotlib**.
 
+![./images/token_tree.png](./images/token_tree.png)
+
 ---
 
 ## 🛠️ Prerequisites
