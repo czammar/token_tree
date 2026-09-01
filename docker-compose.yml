@@ -1,0 +1,17 @@
+services:
+  neo4j:
+    image: neo4j:5.12-community
+    container_name: token-llm-graph
+    ports:
+      - "7474:7474" # Web UI
+      - "7687:7687" #Bolt Port
+    environment:
+      - NEO4J_AUTH=neo4j/password123
+      - NEO4J_PLUGINS=["apoc"]
+    volumes:
+      - neo4j_data:/data
+      - ./data:/var/lib/neo4j/import/data
+      - ./init-db.cypher:/var/lib/neo4j/import/init-db.cypher
+
+volumes:
+  neo4j_data:

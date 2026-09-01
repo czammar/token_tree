@@ -1,0 +1,31 @@
+[project]
+name = "token-tree"
+version = "0.1.0"
+description = "Code repo of the Substack Post Why Do LLM’s Need Token Sampling, and How Do They Generate Text?"
+readme = "README.md"
+requires-python = "==3.11,<3.13"
+dependencies = [
+    "iprogress>=0.4",
+    "nbformat>=5.11.1",
+    "neo4j>=6.2.0",
+    "networkx>=3.6.1",
+    "ollama>=0.6.2",
+    "pandas>=2.3.3",
+    "plotly>=7.0.0",
+    "pyvis>=0.3.2",
+    "requests>=2.34.2",
+    "seaborn>=0.13.2",
+    "torch>=2.2.2",
+    "tqdm>=4.70.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
+
+[tool.uv]
+environments = [
+    "sys_platform == 'darwin' and platform_machine == 'arm64'",
+    "sys_platform == 'darwin' and platform_machine == 'x86_64'"
+]
